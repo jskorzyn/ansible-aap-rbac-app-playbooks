@@ -1,0 +1,15 @@
+---
+- name: App Start
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Debug with message "App Start ver"
+      # Content suggestion provided by Ansible Lightspeed
+      ansible.builtin.debug:
+        msg: "App Start ver 1.0"
+
+    - name: Add wait task 10s
+      # Content suggestion provided by Ansible Lightspeed
+      ansible.builtin.wait_for:
+        timeout: 10
